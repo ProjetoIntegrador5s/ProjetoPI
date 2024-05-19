@@ -13,4 +13,5 @@ public interface ApiService {
 
     @POST("/estagiarios")
     Call<List<EstagiarioModel>> cadastrarEstagiario();
+    
 }
