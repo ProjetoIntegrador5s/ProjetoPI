@@ -3,28 +3,85 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/man"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".CadastroEstagiario">
 
     <EditText
+        android:id="@+id/nomeEst"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/nomeEditText"
         android:hint="Informe um nome" />
-    <Button
+
+    <EditText
+        android:id="@+id/matriculaEst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Informe a matricula"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/nomeCursoEst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Informe o nome do curso"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/dataIngressoEst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Informe a data de ingresso"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/telefoneEst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Informe o telefone"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/emailEst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Informe o email"
+        android:inputType="text" />
+
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <CheckBox
+        android:id="@+id/relatorio1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/CadastroNome"
-        android:text="Cadastrar"/>
+        android:text="Relatório 1" />
 
-    <TextView
+    <CheckBox
+        android:id="@+id/relatorio2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Relatório 2" />
+
+
+    <CheckBox
+        android:id="@+id/compMatricula"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/resultadoTextView"
-        android:text="Resultado"
-        android:layout_marginTop="16dp"
-        android:textSize="16sp" />
+        android:text="Comp. Matricula" />
+
+    <Button
+        android:id="@+id/CadastroNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar" />
 
 </LinearLayout>

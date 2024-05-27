@@ -19,7 +19,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
-    private static final String BASE_URL = "http://192.168.56.1:8080/estagiarios/";
+    private static final String BASE_URL = "http://192.168.1.68:8080/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +38,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Button cadastrar = findViewById(R.id.CadastroNome);
+
+        cadastrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, CadastroEstagiario.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 }

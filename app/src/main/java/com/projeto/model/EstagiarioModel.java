@@ -10,9 +10,9 @@ public class EstagiarioModel {
     @SerializedName("id")
     private int id;
     @SerializedName("nome")
-    public String nome;
+    private String nome;
     @SerializedName("matricula")
-    public String matricula;
+    private String matricula;
     @SerializedName("nomeCurso")
     private String nomeCurso;
     @SerializedName("dataIngresso")
@@ -32,7 +32,21 @@ public class EstagiarioModel {
     @SerializedName("comprovanteMatricula")
     private String comprovanteMatricula;
 
-    public EstagiarioModel(int id,String nome, String matricula, String nomeCurso, String dataIngresso, String telefone, String email, String relatorio1, String relatorio2, String statusRelatorio1, String statusRelatorio2, String comprovanteMatricula) {
+    public EstagiarioModel(String nome, String matricula, String nomeCurso, String dataIngresso, String telefone, String email, String relatorio1, String relatorio2, String statusRelatorio1, String statusRelatorio2, String comprovanteMatricula) {
+        this.nome = nome;
+        this.matricula = matricula;
+        this.nomeCurso = nomeCurso;
+        this.dataIngresso = dataIngresso;
+        this.telefone = telefone;
+        this.email = email;
+        this.relatorio1 = relatorio1;
+        this.relatorio2 = relatorio2;
+        this.statusRelatorio1 = statusRelatorio1;
+        this.statusRelatorio2 = statusRelatorio2;
+        this.comprovanteMatricula = comprovanteMatricula;
+    }
+
+    public EstagiarioModel(int id, String nome, String matricula, String nomeCurso, String dataIngresso, String telefone, String email, String relatorio1, String relatorio2, String statusRelatorio1, String statusRelatorio2, String comprovanteMatricula) {
         this.id = id;
         this.nome = nome;
         this.matricula = matricula;
@@ -47,15 +61,26 @@ public class EstagiarioModel {
         this.comprovanteMatricula = comprovanteMatricula;
     }
 
-    public int getId() {return id;}
-    public void setId(int id) {this.id = id;}
-    public String getNome() {return nome;}
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
+
     public String getMatricula() {
         return matricula;
     }
+
     public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
@@ -130,5 +155,22 @@ public class EstagiarioModel {
 
     public void setComprovanteMatricula(String comprovanteMatricula) {
         this.comprovanteMatricula = comprovanteMatricula;
+    }
+
+    @Override
+    public String toString() {
+        return "EstagiarioModel{" +
+                "nome='" + nome + '\'' +
+                ", matricula='" + matricula + '\'' +
+                ", nomeCurso='" + nomeCurso + '\'' +
+                ", dataIngresso='" + dataIngresso + '\'' +
+                ", telefone='" + telefone + '\'' +
+                ", email='" + email + '\'' +
+                ", relatorio1='" + relatorio1 + '\'' +
+                ", relatorio2='" + relatorio2 + '\'' +
+                ", statusRelatorio1='" + statusRelatorio1 + '\'' +
+                ", statusRelatorio2='" + statusRelatorio2 + '\'' +
+                ", comprovanteMatricula='" + comprovanteMatricula + '\'' +
+                '}';
     }
 }

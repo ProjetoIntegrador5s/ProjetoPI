@@ -2,9 +2,11 @@ package com.projeto.network;
 
 import java.io.File;
 import java.util.Date;
+
 import androidx.room.*;
 
 import com.google.gson.annotations.SerializedName;
+import com.projeto.model.EstagiarioModel;
 
 @Dao
 public class ApiResponseModel {
@@ -34,11 +36,6 @@ public class ApiResponseModel {
     @SerializedName("comprovanteMatricula")
     private String comprovanteMatricula;
 
-    public ApiResponseModel(String nome, String matricula) {
-        this.nome = nome;
-        this.matricula = matricula;
-    }
-
     public ApiResponseModel(int id, String nome, String matricula, String nomeCurso, String dataIngresso, String telefone, String email, String relatorio1, String relatorio2, String statusRelatorio1, String statusRelatorio2, String comprovanteMatricula) {
         this.id = id;
         this.nome = nome;
@@ -54,15 +51,26 @@ public class ApiResponseModel {
         this.comprovanteMatricula = comprovanteMatricula;
     }
 
-    public int getId() {return id;}
-    public void setId(int id) {this.id = id;}
-    public String getNome() {return nome;}
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
+
     public String getMatricula() {
         return matricula;
     }
+
     public void setMatricula(String matricula) {
         this.matricula = matricula;
     }

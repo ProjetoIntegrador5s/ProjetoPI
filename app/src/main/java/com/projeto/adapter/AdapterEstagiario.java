@@ -31,7 +31,7 @@ public class AdapterEstagiario extends RecyclerView.Adapter<AdapterEstagiario.My
 
     private List<EstagiarioModel> estagiarios = new ArrayList<>();
     private Button btnExcluir;
-    private static final String BASE_URL = "http://192.168.56.1:8080/estagiarios/";
+    private static final String BASE_URL = "http://192.168.1.68:8080/estagiarios/";
 
     public AdapterEstagiario(List<EstagiarioModel> estagiarios ) {
         this.estagiarios = estagiarios;

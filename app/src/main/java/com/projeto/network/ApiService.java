@@ -14,7 +14,7 @@ public interface ApiService {
     Call<List<EstagiarioModel>> obterEstagiarios();
 
     @POST("/estagiarios/cadastrar")
-    Call<List<EstagiarioModel>> cadastrarEstagiario();
+    Call<Void> cadastrarEstagiario(@Body EstagiarioModel estagiarioModel);
 
     @POST("/estagiarios/alterar")
     Call<List<EstagiarioModel>> alterarEstagiario();

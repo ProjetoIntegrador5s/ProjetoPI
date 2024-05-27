@@ -26,7 +26,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class CardsEstagiarios extends AppCompatActivity {
 
-    private static final String BASE_URL = "http://192.168.56.1:8080/estagiarios/";
+    private static final String BASE_URL = "http://192.168.1.68:8080/";
     private RecyclerView recyclerView;
     private TextView id;
     private List<EstagiarioModel> estagiariosArray = new ArrayList<>();
@@ -74,8 +74,7 @@ public class CardsEstagiarios extends AppCompatActivity {
                         String statusRelatorio2 = estagiario.getStatusRelatorio2();
                         String comprovanteMatricula = estagiario.getComprovanteMatricula();
 
-                        estagiariosArray.add(new EstagiarioModel(id,nome, matricula, nomeCurso,dataIngresso,telefone,
-                                                                email, relatorio1, relatorio2, statusRelatorio1, statusRelatorio2,comprovanteMatricula));
+                        estagiariosArray.add(new EstagiarioModel(id, nome,matricula,nomeCurso,dataIngresso,telefone,email,relatorio1,relatorio2,statusRelatorio1,statusRelatorio2,comprovanteMatricula));
 
                     }
                 } else {
